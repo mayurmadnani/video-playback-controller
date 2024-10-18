@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Video Playback Controller</title>
+  <style>
+    /* Basic styling for buttons */
+    #controls {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 200px;
+      height: auto;
+      margin: 5px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 50;
+      /* transform: translateY(20px);
+      transition: opacity 0.3s ease, transform 0.3s ease; */
+    }
+
+    button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Add this CSS for the click animation */
+    button:active {
+      transform: scale(0.9);
+      transition: transform 0.1s ease;
+    }
+
+    body {
+    width: 220px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    opacity: 50;
+    background-color: gray; /* Set background color with transparency */
+  }
+
+  /* Ensure text and buttons are visible over the transparent background */
+  #controls button img {
+    filter: brightness(1.5);
+  }
+  </style>
+</head>
+
+<body>
+  <div id="controls">
+    <button id="backward10"><img src="icons/back_playback.png" alt="Backward 10s"></button>
+    <button id="decreaseSpeed"><img src="icons/decrease_speed.png" alt="Decrease Speed"></button>
+    <button id="toggleSpeed"><img src="icons/toggle_speed.png" alt="Toggle Speed"></button>
+    <button id="increaseSpeed"><img src="icons/increase_speed.png" alt="Increase Speed"></button>
+    <button id="forward10"><img src="icons/forward_playback.png" alt="Forward 10s"></button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
